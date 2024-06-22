@@ -13,7 +13,7 @@ def is_valid_image_extension(url):
 
 def download_images():
     response = requests.get(URL, headers=HEADERS)
-    soup = BeautifulSoup(response.content, "html.parser")
+    soup = BeautifulSoup(response.content, "html.parser") #esta libreria va a inspeccionar la pagina, el html y traer lo que le pidamos
     img_tags = soup.find_all("img")
 
     if not os.path.exists("imagenes"):
